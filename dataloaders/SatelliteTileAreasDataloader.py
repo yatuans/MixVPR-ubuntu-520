@@ -15,13 +15,13 @@ IMAGENET_MEAN_STD = {'mean': [0.485, 0.456, 0.406],
 VIT_MEAN_STD = {'mean': [0.5, 0.5, 0.5], 
                 'std': [0.5, 0.5, 0.5]}
 
-TRAIN_CITIES = ['jiashouna','mianbei','xiangang']  # ,'mianbei','ukrian','xiangang',
+TRAIN_CITIES = ['jiashouna','mianbei']  # ,'mianbei','ukrian','xiangang',
 # version_1 error
 # version_2 train ['jiashouna'] , val ['xinzu']
 # version_3 train ['jiashouna','mianbei','xiangang'] , val ['xinzu']
 # version_4 train ['jiashouna','mianbei','ukrian','xiangang']  , val ['xinzu']
 # version_5 train ['jiashouna','mianbei','xiangang'] , val ['xinzu'] 更新去掉了201402的xinzu
-# version_6 train ['jiashouna','mianbei','xiangang'] , val ['xinzu','ukrian-part'] 更新去掉了201402的xinzu,2个验证集合
+# version_6 train ['jiashouna','mianbei','xiangang'] , val ['ukrian-part'] 更新去掉了201402的xinzu,2个验证集合
 # area places images
 # ------------------------
 # jiashouna 1511,12096
@@ -46,7 +46,7 @@ class GSVCitiesDataModule(pl.LightningDataModule):
                  batch_sampler=None,
                  random_sample_from_each_place=True,
                  # val_set_names=['pitts30k_val', 'msls_val'],
-                 val_set_names = ['xinzu_val','ukrian-part_val']
+                 val_set_names = []
                  ):
         super().__init__()
         self.batch_size = batch_size

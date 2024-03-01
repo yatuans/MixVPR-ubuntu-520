@@ -244,7 +244,7 @@ if __name__ == '__main__':
         image_size=(320, 320),
         num_workers=15,
         show_data_stats=True,
-        val_set_names=['xinzu_val','ukrian-part_val'], # pitts30k_val, pitts30k_test, msls_val
+        val_set_names=['xinzu_val'], # "xinzu_val", 'ukrian-part_val'
     )
     
     # examples of backbones
@@ -300,9 +300,9 @@ if __name__ == '__main__':
     # model params saving using Pytorch Lightning
     # we save the best 3 models accoring to Recall@1 on pittsburg val
     checkpoint_cb = ModelCheckpoint(
-        monitor='ukrian-part_val/R1',
+        monitor='xinzu_val/R1',
         filename=f'{model.encoder_arch}' +
-        '_epoch({epoch:02d})_step({step:04d})_R1[{ukrian-part_val/R1:.4f}]_R5[{ukrian-part_val/R5:.4f}]',
+        '_epoch({epoch:02d})_step({step:04d})_R1[{xinzu_val/R1:.4f}]_R5[{xinzu_val/R5:.4f}]',
         auto_insert_metric_name=False,
         save_weights_only=True,
         save_top_k=3,

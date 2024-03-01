@@ -52,13 +52,13 @@ class MSLS(Dataset):
         return len(self.images)
 
 # if __name__ == '__main__':
-#     dataset = MSLS()
-#     a = dataset[0]
-#     print(dataset.__getitem__(0))
-#     # print(dataset.pIdx)
-#     print(dataset.dbImages)
-#     print(dataset.pIdx)
-#     print(f'len of dbImages:{len(dataset.dbImages)}')
-#     print(f'len of pIdx:{len(dataset.pIdx)}')
-#     print(f'len of qImages:{len(dataset.qImages)}')
-#     print(f'len of qIdx:{len(dataset.qIdx)}')
+    # dataset = MSLS()
+    # a = dataset[0]
+    # print(dataset.__getitem__(0))
+    # # print(dataset.pIdx)
+    # # print(dataset.dbImages)
+    # # print(dataset.pIdx)
+    # print(f'len of dbImages:{len(dataset.dbImages)}')
+    # print(f'len of pIdx:{len(dataset.pIdx)}')
+    # print(f'len of qImages:{len(dataset.qImages)}')
+    # print(f'len of qIdx:{len(dataset.qIdx)}')
